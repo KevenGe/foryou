@@ -1,17 +1,50 @@
+.fadeIn {
+  animation:fadeInKey 5s;
+  animation-iteration-count: 1;
+
+  @keyframes fadeInKey {
+    from {
+      opacity: 0;
+      transition: 1s;
+    }
+    to {
+      opacity: 1;
+      transition: 1s;
+    }
+  }
+}
+
 .forYou {
   text-align: center;
   height: 100vh;
   width: 100vw;
   position: relative;
 
+  .bg {
+    text-align: center;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    background-image: url('../images/bg.jpeg');
+    background-position: center;
+    background-size: cover;
+    filter: blur(7px);
+    z-index: -1;
+  }
+
   .show {
     height: 50vh;
     top: 2vh;
+
+    .text {
+      font-size: larger;
+    }
   }
 
   .buttons {
     position: absolute;
     bottom: -2vh;
-    height: 20vh;
+    height: 10vh;
+    width: 100vw;
   }
 }
